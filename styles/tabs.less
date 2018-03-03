@@ -1,0 +1,119 @@
+// Dock tabs
+atom-dock {
+  .tab {
+    border: 0 !important;
+
+    .title {
+      color: @text-color-subtle;
+      text-transform: uppercase;
+
+      &:hover {
+        color: @text-color;
+      }
+    }
+
+    &.active {
+      &:hover .close-icon {
+        color: @text-color-subtle;
+
+        &:hover {
+          color: @text-color-selected;
+        }
+
+        &::after {
+          color: @text-color-subtle !important;
+        }
+      }
+
+      &:not(:hover) .close-icon {
+        &::after {
+          color: @text-color-subtle !important;
+        }
+      }
+    }
+  }
+}
+
+// General Tabs
+.tab-bar {
+  background-color: @tab-bar-background-color;
+  border-bottom: 1px solid @base-border-color;
+
+  .tab {
+    color: @text-color;
+    height: @tab-height;
+    line-height: @tab-height;
+    font-size: @font-size;
+    border-right: 1px solid @tab-border-color;
+    background-color: @tab-background-color;
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    &.active {
+      color: @text-color-selected;
+      background-color: @tab-background-color-active;
+
+      &:hover .close-icon {
+        color: @text-color-subtle;
+
+        &:hover {
+          color: @text-color-selected;
+        }
+      }
+
+      &:not(:hover) .close-icon {
+        color: @tab-background-color;
+
+        &::after {
+          display: inline-block;
+          position: relative;
+          top: 1px;
+          margin-left: 5px;
+          color: @text-color-selected;
+          content: "↩︎";
+        }
+      }
+    }
+
+    // Close Icon (the X) -------------------
+    .close-icon {
+      color: @text-color-subtle;
+
+      &:hover {
+        color: @text-color-selected;
+      }
+    }
+
+    &.active .close-icon:hover {
+      color: @text-color;
+    }
+
+    // Modified Icon (the circle) -------------------
+    &.modified:not(:hover) .close-icon {
+      top: 50%;
+      right: @component-padding + 4px; // 4px -> half of icon size
+      margin-top: -3px;
+      border-color: @text-color-info;
+
+      &::after {
+        content: "";
+      }
+    }
+    &.modified:hover .close-icon {
+      color: @text-color-subtle;
+    }
+
+    // Dragging -------------------
+    &.is-dragging {
+      background: darken(@tab-background-color, 10%);
+      border-color: transparent;
+      opacity: .5;
+
+      & .close-icon {
+        visibility: hidden;
+      }
+    }
+  }
+}

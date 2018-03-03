@@ -1,0 +1,18 @@
+.status-bar {
+  font-size: @font-size - 1;
+  color: @text-color;
+  border-top: 1px solid @base-border-color;
+  background-color: lighten(@tree-view-background-color, 2%);
+
+  a {
+    text-decoration: none;
+  }
+
+  .diagnostics-status-bar-highlight {
+    margin: 0 5px;
+
+    .icon {
+      display: none;
+    }
+  }
+}

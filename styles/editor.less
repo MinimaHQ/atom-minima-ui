@@ -1,0 +1,40 @@
+// Main editor
+atom-text-editor {
+  &.editor .bracket-matcher .region {
+    border: 1px solid #797979;
+    background-color: @background-color-selected;
+  }
+}
+
+// Overlays
+atom-overlay {
+  &.autocomplete-plus {
+    font-size: 14px;
+  }
+
+  .datatip-overlay,
+  .datatip-overlay .datatip-container {
+    background-color: lighten(@base-background-color, 5%);
+  }
+}
+
+// Mini Editors are the "text inputs" used in find+replace or in the settings.
+atom-text-editor[mini] {
+  padding-top: @component-padding/3;
+  padding-left: @component-padding/2;
+  color: @text-color;
+  border-radius: @component-border-radius;
+  background-color: @input-background-color;
+
+  &.is-focused {
+    background-color: darken(@input-background-color, 1.5%);
+  }
+
+  .placeholder-text {
+    color: @text-color-subtle;
+  }
+
+  .selection .region {
+    background-color: @background-color-selected;
+  }
+}
