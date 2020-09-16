@@ -1,3 +1,6 @@
+# 0.0.5
+* Fix scroll in Diagnostics UI.
+
 # 0.0.4
 * Prioritize git classes to make git status visible when item is selected in tree view.
 
