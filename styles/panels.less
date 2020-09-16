@@ -84,8 +84,7 @@ atom-panel.modal {
   }
 
   // Fixes `overflow-y: auto` issue.
-  // Not sure if it doesn't break anything tbh, but it's the best I can do via CSS.
-  .nuclide-ui-table + div[style="*"] {
+  .nuclide-ui-table + div[style*="overflow-y: auto"] {
     height: 100%;
   }
 }
