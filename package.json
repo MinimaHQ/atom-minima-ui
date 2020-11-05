@@ -1,7 +1,7 @@
 {
   "name": "minima-ui",
   "theme": "ui",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A dark UI theme for Atom",
   "keywords": [
     "ui",
