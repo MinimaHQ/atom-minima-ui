@@ -71,6 +71,10 @@ atom-panel.modal {
 
 // Diagnostics
 .diagnostics-ui {
+  .atom-ide-filterable {
+    overflow-y: auto;
+  }
+
   .nuclide-ui-toolbar .nuclide-ui-toolbar__left .nuclide-btn-group .btn {
     width: 26px;
   }
@@ -81,10 +85,5 @@ atom-panel.modal {
 
   .nuclide-ui-table-body .nuclide-ui-table-row .nuclide-ui-table-body-cell:last-child {
     border-right: none;
-  }
-
-  // Fixes `overflow-y: auto` issue.
-  .nuclide-ui-table + div[style*="overflow-y: auto"] {
-    height: 100%;
   }
 }

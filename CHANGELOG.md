@@ -1,3 +1,6 @@
+# 0.0.7
+* Fix fix fix scroll in Diagnostics UI.
+
 # 0.0.6
 * Fix fix scroll in Diagnostics UI.
 
